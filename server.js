@@ -15,7 +15,6 @@ const port = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(bodyParser.json());
 
 // Database connection
 // const pool = new Pool({
@@ -59,7 +58,7 @@ app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   res.send("Hello from the server!");
-})
+});
 
 app.post("/api/translations", async (req, res) => {
   // JSON.parse(req.body);
